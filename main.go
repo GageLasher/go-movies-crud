@@ -82,7 +82,7 @@ func main() {
 	movies = append(movies, Movie{"2", "443723", "Movie2", &Director{"John", "Henry"}})
 
 	r.HandleFunc("/movies", getMovies).Methods("GET")
-	r.HandleFunc("/movie/{id}", getMovie).Methods("GET")
+	r.HandleFunc("/movies/{id}", getMovie).Methods("GET")
 	r.HandleFunc("/movies", createMovie).Methods("POST")
 	r.HandleFunc("/movies/{id}", updateMovie).Methods("PUT")
 	r.HandleFunc("/movies/{id}", deleteMovie).Methods("DELETE")
